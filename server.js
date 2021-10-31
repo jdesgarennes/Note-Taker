@@ -13,11 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './public')))
 
-// sets route for /notes 
-app.get('/notes', (req,res) =>{
-    res.sendFile(path.join(__dirname, './public', 'notes.html' ));
-})
-
 
 // sets API route for reading db.json
 
@@ -46,3 +41,12 @@ app.post('/api/notes', (req, res) => {
     })
 
 
+
+// sets route for /notes 
+app.get('/notes', (req,res) =>{
+    res.sendFile(path.join(__dirname, './public', 'notes.html' ));
+})
+// sets route for /*
+app.get('/*', (req,res) =>{
+    res.sendFile(path.join(__dirname, './public', 'index.html' ));
+})
