@@ -43,7 +43,6 @@ app.post('/api/notes', (req, res) => {
              res.json(newdata);
         }
 
-
     )});
     })
 
