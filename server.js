@@ -2,7 +2,6 @@
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
-const { JSHandle } = require('puppeteer');
 const app = express();
 
 // defining port and console log the output.
